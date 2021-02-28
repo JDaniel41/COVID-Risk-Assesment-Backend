@@ -1,0 +1,12 @@
+runtime: python
+env: flex
+entrypoint: gunicorn -b :$PORT main:app
+
+beta_settings:
+        cloud_sql_instances: cusehacks-306121:us-central1:cusehacks-db
+
+env_variables:
+        DB_PASS: # ADD PASSWORD        
+
+runtime_config:
+  python_version: 3
