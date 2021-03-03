@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 # configuration
 app.config["SECRET_KEY"] = "yoursecretkey"
-app.config["SQLALCHEMY_DATABASE_URI"]= "postgres://ojpjgsoaqedmru:ec2be93786e14d5094df12b0384cea9c96d64dfb796163da18811533f0daf415@ec2-54-164-241-193.compute-1.amazonaws.com:5432/d35gfe35i2kfvb"
+app.config["SQLALCHEMY_DATABASE_URI"]= os.environ['DATABASE_URL']
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"]= True
 
 print(app.config["SQLALCHEMY_DATABASE_URI"])
